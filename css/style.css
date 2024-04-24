@@ -1,8 +1,8 @@
 main {
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .main-title {
@@ -10,40 +10,39 @@ main {
 }
 
 .main-section {
-    background-color: aliceblue;
-    border-radius: 4px;
-    padding: 16px;
+    background-color: rgb(250, 246, 194);
+    border-radius: 10px;
+    padding: 15px;
 }
 
 .section-celcius {
-    padding-top: 16px;
+    padding-top: 10px;
 }
 
 .section-farenheit {
-    padding-top: 16px;
+    padding-top: 10px;
 }
 
 .section-result {
-    padding-top: 16px;
+    padding-top: 10px;
+}
+
+.section-reverse {
+    padding-top: 1px;
 }
 
 .section-explanation {
-    padding-top: 16px;
+    padding-top: 1px;
 }
 
 textarea {
     width: 75%;
-    height: 32px;
+    height: 30px;
     resize: none;
-    border: 2px solid lavender;
-    border-radius: 4px;
-    font-size: 16px;
-    color: coral;
-}
-
-.formula-s {
-    font-size: 20px;
-    font-style: italic;
+    border: 1px solid lavender;
+    border-radius: 5px;
+    font-size: 15px;
+    color : rebeccapurple;
 }
 
 .formula-s>sub {
@@ -61,13 +60,13 @@ button {
 #button-convert {
     background-color: blue;
     color: white;
-    margin-right: 8px;
+    margin-right: 10px;
 }
 
 #button-reset {
     background-color:red;
     color: white;
-    margin-right: 8px;
+    margin-right: 10px;
 }
 
 #button-reverse {

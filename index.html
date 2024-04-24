@@ -5,64 +5,74 @@
     <meta charset=""UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css"
-    <title>Temperature Converter by RUDY</title>
-</head>
+    <script src="js/script.js"></script>
+</head>    
 
 <body>
     <main>
+        <header class="main-title"
+            <p>Temperature Converter by RUDY</p>
+        </header>
 
-        <section>
-            <h>Masukkan suhu derajat Celcius (&deg;C) ke kotak dibawah, lalu klik tombol Konversi</h>
-            <h>untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (&deg;F).</h>
-        </section>
+        <section class="main-section">
+            <p>Masukkan suhu derajat Celcius (&deg;C) ke kotak dibawah, lalu klik tombol Konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (&deg;F).</p>        
             
-        <section class="section-celcius">
-            <header>
+            <section class="section-celcius">
                 <h>Celcius (&deg;C):</h>
-            </header>
-            <article>
-                <textarea rows="1"</textarea></textarea>
-            </article>
-            <div class="container-button">
-                <button id="button-convert">Konversi</button>
-                <button id="button-reset">Reset</button>
-                <button id="button-reverse">Reverse</button>
-            </div>
-            <p></p>
-        </section>           
+                <article>
+                    <textarea rows="1"<input id="inputCelsius" type="number" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)"></textarea>
+                </article>
+                <div class="button">
+                    <button id="button-convert">Konversi</button>
+                    <button id="button-reset">Reset</button>
+                    <button id="button-reverse">Reverse</button>
+                </div>
+                <p></p>
+            </section>           
 
-        <section class="section-fahrenheit">
-            <header>
+            <section class="section-fahrenheit">
                 <h>Fahrenheit (&deg;F):</h>
-            </header>
-            <article>
-                <textarea rows="1"</textarea></textarea>
-            </article>
-        </section>
+                <article>
+                    <textarea rows="1"<span id="outputFahrenheit"></textarea>
+                </article>
+            </section>
+            <script>
+                function temperatureConverter(valNum) {
+                valNum = parseFloat(valNum);
+                document.getElementById("outputFahrenheit").innerHTML=(valNum*1.8)+32;
+                }
+            </script>      
 
-        <section class="section-result"
-            <header>
-                <h>Cara Kalkulasi:</h>
-            </header>            
-            <article>
-                <textarea rows="1"</textarea></textarea>
-            </article>
-        </section>
+            <section class="section-result"
+                <h>Cara Kalkulasi:</h>                          
+                <article>
+                    <textarea rows="1"</textarea></textarea>
+                </article>
+            </section>
 
-        <section class="section-explanation"
-            <header>
-                <h3> Konversi Dari Celcius (&deg;C) ke Fahrenheit (&deg;F)</h3>
-            </header>
-            <hr>
-            <article>
-                <h>Suhu <i>S</i> dalam derajat Fahrenheit (&deg;F) sama dengan suhu <i>S</i> dalam derajat</h>
-                <h>Celsius (&deg;C) kali 9/5 tambah 32.</h>
-                <h1>S<sub>(&deg;F)</sub> = (S<sub>(&deg;C) x 9/5) + 32</h1>
-                <h>atau</h>
-                <h1>S<sub>(&deg;F)</sub> = (S<sub>(&deg;C) x 1.8) + 32</h1>   
-            </article>
-        </section>
+            <section class="section-reverse"
+                <header>
+                    <p id="demo" onclick="myFunction()">Fahrenheit ke Celsius</p>
+                    <script>
+                    function myFunction() {
+                    document.getElementById("demo").innerHTML = "Error link belum berfungsi";
+                    }
+                    </script>
+                </header>          
 
+            <section class="section-explanation"
+                <header>
+                    <h3> Konversi Dari Celcius (&deg;C) ke Fahrenheit (&deg;F)</h3>
+                </header>
+                <hr>
+                <article>
+                    <p>Suhu <i>S</i> dalam derajat Fahrenheit (&deg;F) sama dengan suhu <i>S</i> dalam derajat Celsius (&deg;C) kali 9/5 tambah 32.</p>
+                    <h1>S<sub>(&deg;F)</sub> = (S<sub>(&deg;C) x 9/5) + 32</h1>
+                    <p>atau</p>
+                    <h1>S<sub>(&deg;F)</sub> = (S<sub>(&deg;C) x 1.8) + 32</h1>   
+                </article>
+            </section>
+        </section>
     </main>
 </body>
 
